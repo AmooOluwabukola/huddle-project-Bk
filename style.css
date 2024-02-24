@@ -10,24 +10,24 @@
 body{
     background-image: url('assets/bg-mobile.svg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-color: hsl(257, 40%, 49%);
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
-    /* background: url('assets/bg-mobile.svg')  no-repeat hsl(257, 40%, 49%); */
 }
 .container{
     width: 90%;
     margin: auto;
+    display: flex;
 }
 
 /* nav styling */
 nav img {
-    width: 41%;
+    width: 20%;
    
 }
 nav{
-    padding-top: 2rem;
+    padding-top: 50px;
 }
 
 /* main styling */
@@ -54,10 +54,11 @@ nav{
     color: white;
 }
 .main-inner-text p {
-    /* font-family:  "Open Sans", sans-serif; */
-    color: rgb(173, 164, 164);
+    font-family:  "Open Sans", sans-serif;
+    color: rgb(247, 240, 240);
     width: 85%;
     margin: auto;
+
 }
 .main-inner-text button{
     width: 70%;
@@ -66,5 +67,66 @@ nav{
     border: none;
     border-radius: 2rem;
     color:  hsl(300, 69%, 71%);
-    box-shadow:-1px 2px 5px rgb(70,68,68);
+    box-shadow:-1px 2px 5px rgb(182, 177, 177);
+}
+.container footer{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    color: azure;
+}
+/* deskstop responsive */
+@media(min-width:1024px){
+    body{
+        background-image: url('assets/bg-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: hsl(257, 40%, 49%);
+        font-family: "Open Sans", sans-serif;
+        font-weight: 400;
+    }
+
+    
+    .main{
+        margin-top: 75px;
+        display: table;
+        clear: both;
+        text-align:justify;
+    }
+    .main img{
+        max-width: 100%;
+        float: left;
+        /* margin-top: 4px; */
+    }
+    
+    .main-inner-text{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .main-inner-text h2 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        color: white;
+        margin-top: 3rem;
+        justify-items: left;
+    }
+    .container footer{
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+        margin-top: 13rem;
+        color: azure;
+}
+.main-inner-text button{
+    width: 50%;
+    height: 2rem;
+    margin: auto;
+    border: none;
+    border-radius: 2rem;
+    color:  hsl(300, 69%, 71%);
+    box-shadow:-1px 2px 5px rgb(182, 177, 177);
+}
 }
